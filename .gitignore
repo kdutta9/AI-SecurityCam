@@ -1,3 +1,8 @@
+# PyCharm
 .idea/
+
+# Virtual Environment
 venv/
+
+# ignore testing/initialization files
 sample/
