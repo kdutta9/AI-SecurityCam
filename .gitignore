@@ -4,5 +4,6 @@
 # Virtual Environment
 venv/
 
-# ignore testing/initialization files
+# ignore design files
 sample/
+design.txt
