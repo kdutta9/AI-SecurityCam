@@ -46,8 +46,9 @@ class SecurityFeed:
             confidence = detections[0, 0, i, 2]
             idx = int(detections[0, 0, i, 1])
 
-            # Turn recording switch off when no person detected.
+            # Return True when person detected.
             if confidence > self.thresh and self.labels[idx] == "person":
+                print("Person detected on camera.")
                 return True
 
         return False
@@ -62,3 +63,4 @@ class SecurityFeed:
         while not self.detect():
             time.sleep(15)
         cap.stop_recording()
+        print("Recording saved locally.")
