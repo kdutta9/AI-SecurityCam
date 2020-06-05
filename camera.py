@@ -1,4 +1,5 @@
 from imutils.video import VideoStream
+from picamera import PiCamera
 import numpy as np
 import imutils
 import time
@@ -6,8 +7,6 @@ import cv2
 
 
 class SecurityFeed:
-
-
     # Initialize the video stream and model, with 2 seconds warm-up and display to console.
     def __init__(self, prototxt, model, labels, colors, thresh=0.2):
         self.prototxt = prototxt
@@ -51,3 +50,14 @@ class SecurityFeed:
                 return True
 
         return False
+
+
+    def record(self):
+        cap = PiCamera()
+        start = time.time()
+        cap.start_recording('/home/pi/Desktop/video.h264')
+
+        # Record until person exits frame and leave 15 second buffer
+        while not self.detect():
+            time.sleep(15)
+        cap.stop_recording()
