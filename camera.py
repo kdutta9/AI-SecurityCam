@@ -14,6 +14,7 @@ class SecurityFeed:
         self.labels = labels
         self.colors = colors
         self.thresh = thresh
+        self.uploads = 0
         print("Loading model...")
         self.net = cv2.dnn.readNetFromCaffe(self.prototxt, self.model)
         print("Starting camera...")
@@ -54,8 +55,8 @@ class SecurityFeed:
 
     def record(self):
         cap = PiCamera()
-        start = time.time()
-        cap.start_recording('/home/pi/Desktop/video.h264')
+        self.uploads += 1
+        cap.start_recording('/home/pi/Desktop/video{}.h264'.format(str(self.uploads)))
 
         # Record until person exits frame and leave 15 second buffer
         while not self.detect():
