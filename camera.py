@@ -49,6 +49,12 @@ class SecurityFeed:
             # Return True when person detected.
             if confidence > self.thresh and self.labels[idx] == "person":
                 print("Person detected on camera.")
+
+                # Draw box around detection
+                box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
+                (startX, startY, endX, endY) = box.astype("int")
+                cv2.rectangle(frame, (startX, startY), (endX, endY), self.labels[idx], 2)
+
                 return True
 
         return False
