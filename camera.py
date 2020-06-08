@@ -28,6 +28,11 @@ class SecurityFeed:
         cv2.destroyAllWindows()
         self.vs.stop()
 
+    # Grab frame of video.
+    def get_frame(self):
+        frame = self.vs.read()
+        ret, jpeg = cv2.imencode('.jpg', frame)
+        return jpeg.tobytes()
 
     # If person is detected, return True.
     def detect(self):
