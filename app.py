@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 from flask import Flask, render_template, Response
-from camera_pi import Camera
+from camera import Camera
 
 app = Flask(__name__)
 name = "John Doe"
