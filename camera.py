@@ -1,6 +1,7 @@
 from imutils.video.pivideostream import PiVideoStream
 import imutils
 import time
+import cv2
 
 class Camera:
     def __init__(self):
@@ -12,4 +13,6 @@ class Camera:
         self.vs.stop()
 
     def get_frame(self):
-        return self.vs.read()
+        readFrame = self.vs.read()
+        buf = cv2.imencode('.jpg', readFrame)[1].tostring()
+        return buf
