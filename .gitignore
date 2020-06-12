@@ -4,7 +4,3 @@ __pycache__/
 
 # Virtual Environment
 venv/
-
-# ignore design files
-sample/
-design.txt
