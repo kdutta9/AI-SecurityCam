@@ -5,6 +5,7 @@ from camera import Camera
 
 app = Flask(__name__)
 name = "John Doe"
+model = "models/haarcascade_fullbody.xml"
 
 
 @app.route('/')
@@ -14,7 +15,7 @@ def index():
 
 def gen(camera):
     while True:
-        frame = camera.get_frame()
+        frame = camera.get_frame(model)
         yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
 
