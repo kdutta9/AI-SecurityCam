@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import os
 from flask import Flask, render_template, Response
 from camera import Camera
 
