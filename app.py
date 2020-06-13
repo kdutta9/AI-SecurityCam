@@ -25,7 +25,4 @@ def video_feed():
 
 
 if __name__ == '__main__':
-    try:
-        app.run(host='0.0.0.0', threaded=True)
-    except KeyboardInterrupt:
-        print("Camera shutting down...")
+    app.run(host='0.0.0.0', threaded=True)
