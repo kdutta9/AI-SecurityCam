@@ -3,13 +3,12 @@ from flask import Flask, render_template, Response
 from camera import Camera
 
 app = Flask(__name__)
-name = "John Doe"
 model = "models/haarcascade_fullbody.xml"
 
 
 @app.route('/')
 def index():
-    return render_template('index.html', name=name)
+    return render_template('index.html')
 
 
 def gen(camera):

@@ -1,9 +1,10 @@
 <html>
   <head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Security Feed</title>
   </head>
   <body>
-    <h1>{{ name }} Security Feed</h1>
-    <img src="{{ url_for('video_feed') }}">
+    <h1>Security Feed</h1>
+    <img src="{{ url_for('video_feed') }}" alt="feed" class="center">
   </body>
 </html>
