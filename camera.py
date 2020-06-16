@@ -16,7 +16,15 @@ class Camera:
         self.vs.stop()
         cv2.destroyAllWindows()
 
-    def get_frame(self, model):
+    def get_frame(self):
+        readFrame = self.vs.read()
+        self.fps.update()
+        self.fps.stop()
+
+        buf = cv2.imencode('.jpg', readFrame)[1].tostring()
+        return buf, self.fps.fps()
+
+    def detect(self, model):
         readFrame = self.vs.read()
         cascade = cv2.CascadeClassifier(model)
         gray = cv2.cvtColor(readFrame, cv2.COLOR_BGR2GRAY)
@@ -33,8 +41,5 @@ class Camera:
             cv2.imwrite(self.path + "cap{num}.jpg".format(num=self.detections), readFrame)
             print("Image saved to device.")
 
-        self.fps.update()
-        self.fps.stop()
-
         buf = cv2.imencode('.jpg', readFrame)[1].tostring()
-        return buf, self.fps.fps()
+        return buf
