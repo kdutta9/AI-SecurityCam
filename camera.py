@@ -1,4 +1,5 @@
 from imutils.video.pivideostream import PiVideoStream
+from imutils.video import FPS
 import time
 import cv2
 
@@ -9,6 +10,7 @@ class Camera:
         self.path = path
         print("Starting camera...")
         time.sleep(5)
+        self.fps = FPS().start()
 
     def __del__(self):
         self.vs.stop()
@@ -31,5 +33,8 @@ class Camera:
             cv2.imwrite(self.path + "cap{num}.jpg".format(num=self.detections), readFrame)
             print("Image saved to device.")
 
+        self.fps.update()
+        self.fps.stop()
+
         buf = cv2.imencode('.jpg', readFrame)[1].tostring()
-        return buf
+        return buf, self.fps.fps()

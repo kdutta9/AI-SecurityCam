@@ -14,12 +14,12 @@ def mkdir():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', fps=feed.get_frame(model)[1])
 
 
 def gen(camera):
     while True:
-        frame = camera.get_frame(model)
+        frame = camera.get_frame(model)[0]
         yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
 
