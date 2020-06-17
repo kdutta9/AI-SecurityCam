@@ -1,6 +1,8 @@
 # AI Security Camera
 Software that provides a live video feed of a camera and saves images when humans are detected in the frame. Powered by Raspberry Pi.
 
+![Screenshot](https://i.imgur.com/XbX89o3.jpg)
+
 ## 📝 Table of Contents
 - [Getting Started](#getting_started)
 - [Software Used](#software)
