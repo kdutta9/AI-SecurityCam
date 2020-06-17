@@ -59,7 +59,7 @@ pip3 install -r requirements.txt
 ## Authors <a name = "authors"></a>
 - [@kdutta9](https://github.com/kdutta9)
 
-See also the list of [contributors](https://github.com/kdutta9/RPi-SecurityCam/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/kdutta9/AI-SecurityCam/graphs/contributors) who participated in this project.
 
 ## Acknowledgements <a name = "acknowledgement"></a>
 - Inspiration for Live Streaming using Flask: [Miguel Greenberg](https://blog.miguelgrinberg.com/post/video-streaming-with-flask)
