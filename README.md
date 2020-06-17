@@ -3,6 +3,8 @@ Software that provides a live video feed of a camera and saves images when human
 
 ![Screenshot](https://i.imgur.com/XbX89o3.jpg)
 
+See my [blog post about this project](https://kdutta9.github.io/projects/2020/06/16/AI-Security-Cam/).
+
 ## 📝 Table of Contents
 - [Getting Started](#getting_started)
 - [Software Used](#software)
