@@ -53,7 +53,7 @@ pip3 install -r requirements.txt
 ## Software Used <a name = "software"></a>
 - [Python](https://www.python.org/)
 - [OpenCV](https://opencv.org/) - Object Detection
-- [ImUtils](https://pypi.org/project/imutils/) - Image Processing
+- [ImUtils](https://github.com/jrosebr1/imutils/) - Image Processing
 - [Flask](https://github.com/pallets/flask) - Web Framework
 
 ## Authors <a name = "authors"></a>
