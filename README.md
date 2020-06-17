@@ -4,7 +4,7 @@ Software that provides a live video feed of a camera and saves images when human
 ## 📝 Table of Contents
 - [Getting Started](#getting_started)
 - [Software Used](#software)
-- [Contributing](../CONTRIBUTING.md)
+- [Contributing](./CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
