@@ -32,7 +32,7 @@ sudo apt install python3-pip
 Clone the repository into any directory of your choice by:
 ```bash
 cd [DIRECTORY-OF-CHOICE]
-git clone https://github.com/kdutta9/RPI-SecurityCam
+git clone https://github.com/kdutta9/RPI-SecurityCam.git
 ```
 I recommend using a virtual environment, using <i>virtualenv</i>, for the project, to ensure there are no errors with dependencies and such. Make sure you create in the virtual environment in the project directory.
 - Installing virtualenv
