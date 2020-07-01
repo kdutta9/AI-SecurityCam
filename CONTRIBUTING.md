@@ -1,7 +1,7 @@
 # Contributing Guide
 
 - Fork the repo
-  - <https://github.com/kdutta9/base-converter/fork>
+  - <https://github.com/kdutta9/AI-SecurityCam/fork>
 - Check out a new branch based and name it to what you intend to do:
   - Example:
     ````
